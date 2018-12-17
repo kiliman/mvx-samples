@@ -38,8 +38,15 @@ namespace MvxSamples.Validation.Droid
             text.AfterTextChanged += (sender, args) => text.Text = "" + text.Text;
             text.Hint = "" + text.Hint;
         }
-        
-        public void Include(CheckedTextView text)
+
+	public void Include(EditText text)
+        {
+            text.AfterTextChanged += (sender, args) => text.Text = "" + text.Text;
+            text.Hint = "" + text.Hint;
+            text.Error = "" + text.Error;
+        }        
+
+	public void Include(CheckedTextView text)
         {
             text.AfterTextChanged += (sender, args) => text.Text = "" + text.Text;
             text.Hint = "" + text.Hint;
